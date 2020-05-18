@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="edu.umbc.cs.ebiquity.mithril.currentapps"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+<!-- 	Original compatibility was API level 17 but due to the changes in 
+		usageStatsManagerMethodOfCollectingAppData@CurrentAppsRunningService.java we had to make this 21 -->
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="23" />
+
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    
+    <!-- to get recently launched apps using UsageStatsManager API -->
+	<uses-permission android:name="android.permission.GET_TASKS" />
+	<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
+	
+	<!-- to get recently launched apps using Logcat -->
+	<uses-permission android:name="android.permission.READ_LOGS" />
+	<uses-permission android:name="android.permission.GET_RUNNING_TASKS" />
+	
+<!-- for rooted devices only, allows many more cool features, for example background uninstallation -->
+<!-- 	<uses-permission android:name="android.permission.ACCESS_SUPERUSER" /> -->
+   
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".ui.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service
+            android:name=".service.CurrentAppsInstalledService"
+            android:exported="false">
+        </service>
+        <service
+            android:name=".service.CurrentAppsRunningService"
+            android:exported="false">
+        </service>
+        		<receiver android:name=".receiver.AppInstallBroadcastReceiver">
+			<intent-filter>
+	            <category android:name="android.intent.category.DEFAULT" />
+	            <action android:name="android.intent.action.PACKAGE_ADDED"  />
+	            <action android:name="android.intent.action.PACKAGE_CHANGED" />
+	            <action android:name="android.intent.action.PACKAGE_INSTALL" />
+	            <action android:name="android.intent.action.PACKAGE_REMOVED" />
+	            <action android:name="android.intent.action.PACKAGE_REPLACED" />
+	            <data android:scheme="package" />
+        	</intent-filter>
+        </receiver>
+        <activity android:name=".ui.NotificationView" >
+        </activity>
+    </application>
+
+</manifest>

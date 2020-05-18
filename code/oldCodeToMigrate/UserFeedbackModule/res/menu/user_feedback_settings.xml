@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/actionDeleteRule"
+        android:title="@string/action_delete_rule"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
+    <item android:id="@+id/actionRuleOK"
+        android:title="@string/action_rule_ok"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
+</menu>

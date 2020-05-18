@@ -1,0 +1,162 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="edu.umbc.cs.ebiquity.mithril.ui.ChangeRuleActivity" >
+
+    <TextView
+       	android:id="@+id/changeRuleHeadingTextViewId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+       	android:text="@string/pol_rule_cond_heading_text"
+       	android:textAppearance="@android:style/TextAppearance.Holo.Small"
+       	android:textColor="@color/darkblue" />
+    	
+    <ScrollView 
+        android:id="@+id/layout" 
+	    android:layout_below="@id/changeRuleHeadingTextViewId"
+        android:layout_height="match_parent"         
+        android:scrollbars="horizontal|vertical" 
+        android:layout_width="match_parent"     
+        android:layout_marginTop="5dip"     
+        android:scrollbarStyle="outsideInset"
+        android:fadeScrollbars="false"
+        android:fillViewport="true"> 
+        <HorizontalScrollView 
+            android:id="@+id/horizontalView" 
+            android:layout_height="wrap_content"     
+            android:scrollbars="horizontal|vertical" 
+            android:layout_width="wrap_content"
+            android:fadeScrollbars="false"
+            android:layout_marginTop="5dip">	
+            <TableLayout
+                android:id="@+id/tblDynamicInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+                <TableRow
+                    android:id="@+id/changeRuleTableRowTimeContextId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+                    <TextView
+                        android:id="@+id/changeRuleTimeContextTextViewId"
+                        android:text="@string/pol_rule_cond_time_context_text"
+                        android:textAppearance="@android:style/TextAppearance.Holo.Small" />
+                    <Spinner
+                        android:id="@+id/changeRuleTimeContextSpinnerId"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                    <ToggleButton 
+                        android:id="@+id/changeRuleTimeContextToggleButtonId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textOn="On"
+                        android:textOff="Off" />
+                </TableRow>
+                <TableRow
+                    android:id="@+id/changeRuleTableRowLocationContextId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+                    <TextView
+                        android:id="@+id/changeRuleLocationContextTextViewId"
+                        android:text="@string/pol_rule_cond_location_context_text"
+                        android:textAppearance="@android:style/TextAppearance.Holo.Small" />
+                    <Spinner
+                        android:id="@+id/changeRuleLocationContextSpinnerId"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                    <ToggleButton 
+                        android:id="@+id/changeRuleLocationContextToggleButtonId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textOn="On"
+                        android:textOff="Off" />
+                </TableRow>
+                <TableRow
+                    android:id="@+id/changeRuleTableRowActivityContextId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+                    <TextView
+                        android:id="@+id/changeRuleActivityContextTextViewId"
+                        android:text="@string/pol_rule_cond_activity_context_text"
+                        android:textAppearance="@android:style/TextAppearance.Holo.Small" />
+                    <Spinner
+                        android:id="@+id/changeRuleActivityContextSpinnerId"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                    <ToggleButton 
+                        android:id="@+id/changeRuleActivityContextToggleButtonId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textOn="On"
+                        android:textOff="Off" />
+                </TableRow>
+                <TableRow
+                    android:id="@+id/changeRuleTableRowPresenceInfoContextId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+                    <TextView
+                        android:id="@+id/changeRulePresenceInfoContextTextViewId"
+                        android:text="@string/pol_rule_cond_presence_info_context_text"
+                        android:textAppearance="@android:style/TextAppearance.Holo.Small" />
+                    <Spinner
+                        android:id="@+id/changeRulePresenceInfoContextSpinnerId"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                    <ToggleButton 
+                        android:id="@+id/changeRulePresenceInfoContextToggleButtonId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textOn="On"
+                        android:textOff="Off" />
+                </TableRow>
+<!-- 	                <TableRow
+                  android:id="@+id/changeRuleTableRowDynamicContextId"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content" >
+                  <Spinner
+                      android:id="@+id/changeRuleDynamicContextHeaderSpinnerId"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content" />
+                  <Spinner
+                      android:id="@+id/changeRuleDynamicContextValueSpinnerId"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content" />
+                  <ToggleButton 
+                      android:id="@+id/changeRuleDynamicContextToggleButtonId"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textOn="On"
+                      android:textOff="Off" />
+              </TableRow> -->
+			</TableLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+
+	<Button
+        android:id="@+id/btnDoneChangingRule"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:text="@string/pol_rule_changing_done_btn_label" />
+
+	<Button
+        android:id="@+id/btnAddMoreConsequents"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@id/btnDoneChangingRule"
+        android:text="@string/pol_rule_changing_add_more_consequents_label" />
+	
+</RelativeLayout>

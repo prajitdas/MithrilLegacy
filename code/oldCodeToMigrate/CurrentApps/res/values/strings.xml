@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Current Apps</string>
+    <string name="action_settings">Settings</string>
+    <string name="StartCurrentAppsSvcBtnTxt">Start Current Apps Service</string>
+    <string name="acceptAgreenentBtnTxt">Accept</string>
+    <string name ="agreementText">1. We are going to collect mobile app usage information using this app.\n
+2. No information about user identity will be collected.\n
+3. The data will not be used for any commercial purpose without prior notice.\n
+4. This is to facilitate research in mobile privacy.\n
+5. You can contact the developer at prajitdas[AT]gmail[DOT]com.\n
+6. By clicking on the accept button below you agree to provide data periodically for research purposes.\n
+7. Data upload will only be done in presence of a WiFi connection to ensure no charges occur on your bill due to the data collection process.\n</string>
+
+    <string name="notificationtitle">Current Apps Notification</string>
+    <string name="lbltitle">"Title: "</string>
+    <string name="lbltext">"Text: "</string>
+</resources>

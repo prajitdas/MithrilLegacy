@@ -1,0 +1,189 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="edu.umbc.cs.ebiquity.mithril.ui.UserFeedbackActivity" >
+
+	<Button
+        android:id="@+id/btnChangeRule"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnCreateNewRule"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:text="@string/pol_rule_change_btn_label" />
+
+    <Button
+        android:id="@+id/btnCreateNewRule"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:text="@string/pol_rule_create_new_btn_label"
+        android:visibility="gone" />
+		
+ 	<TableLayout
+		android:id="@+id/tblStaticInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true" >
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+			<TextView
+            	android:text="@string/policy_tbl_policy_rule_info"
+            	android:textAppearance="@android:style/TextAppearance.Holo.Small" 
+            	android:textColor="@color/darkblue" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+			<TextView
+            	android:text="@string/policy_tbl_lbl_policy_name"
+            	android:textAppearance="@android:style/TextAppearance.Holo.Small" />
+			<TextView
+            	android:id="@+id/policy_tbl_data_policy_name_id"
+            	android:text="@string/policy_tbl_data_policy_name"
+            	android:textAppearance="@android:style/TextAppearance.Holo.Small" />
+		</TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+			<TextView
+            	android:text="@string/policy_tbl_lbl_rule_name" 
+            	android:textAppearance="@android:style/TextAppearance.Holo.Small" />
+			<TextView
+            	android:id="@+id/policy_tbl_data_rule_name_id"
+            	android:text="@string/policy_tbl_data_rule_name" 
+            	android:textAppearance="@android:style/TextAppearance.Holo.Small" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+			<TextView
+            	android:text="@string/policy_tbl_lbl_requester_info"
+            	android:textAppearance="@android:style/TextAppearance.Holo.Small" 
+            	android:textColor="@color/darkblue" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+			<TextView
+            	android:text="@string/policy_tbl_lbl_app_name" 
+            	android:textAppearance="@android:style/TextAppearance.Holo.Small" />
+			<TextView
+            	android:id="@+id/policy_tbl_data_app_name_id"
+            	android:text="@string/policy_tbl_data_app_name" 
+            	android:textAppearance="@android:style/TextAppearance.Holo.Small" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+			<TextView
+            	android:text="@string/policy_tbl_lbl_app_content_maturity" 
+            	android:textAppearance="@android:style/TextAppearance.Holo.Small" />
+			<TextView
+            	android:id="@+id/policy_tbl_app_content_maturity_id"
+            	android:text="@string/policy_tbl_app_content_maturity" 
+            	android:textAppearance="@android:style/TextAppearance.Holo.Small" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+			<TextView
+            	android:text="@string/policy_tbl_lbl_app_developer" 
+            	android:textAppearance="@android:style/TextAppearance.Holo.Small" />
+			<TextView
+            	android:id="@+id/policy_tbl_data_app_developer_id"
+            	android:text="@string/policy_tbl_data_app_developer" 
+            	android:textAppearance="@android:style/TextAppearance.Holo.Small" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+			<TextView
+            	android:text="@string/policy_tbl_lbl_app_origin_country" 
+            	android:textAppearance="@android:style/TextAppearance.Holo.Small" />
+			<TextView
+            	android:id="@+id/policy_tbl_data_app_origin_country_id"
+            	android:text="@string/policy_tbl_data_app_origin_country" 
+            	android:textAppearance="@android:style/TextAppearance.Holo.Small" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+			<TextView
+            	android:text="@string/policy_tbl_lbl_app_rating" 
+            	android:textAppearance="@android:style/TextAppearance.Holo.Small" />
+			<TextView
+            	android:id="@+id/policy_tbl_data_app_rating_id"
+            	android:text="@string/policy_tbl_data_app_rating" 
+            	android:textAppearance="@android:style/TextAppearance.Holo.Small" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+			<TextView
+            	android:text="@string/policy_tbl_lbl_app_install_count" 
+            	android:textAppearance="@android:style/TextAppearance.Holo.Small" />
+			<TextView
+            	android:id="@+id/policy_tbl_data_app_install_count_id"
+            	android:text="@string/policy_tbl_data_app_install_count" 
+            	android:textAppearance="@android:style/TextAppearance.Holo.Small" />
+		</TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+			<TextView
+            	android:text="@string/policy_tbl_lbl_violation_info" 
+            	android:textAppearance="@android:style/TextAppearance.Holo.Small" 
+            	android:textColor="@color/darkblue" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+			<TextView
+            	android:text="@string/policy_tbl_lbl_requester" 
+            	android:textAppearance="@android:style/TextAppearance.Holo.Small" />
+			<TextView
+            	android:id="@+id/policy_tbl_data_requester_id"
+            	android:text="@string/policy_tbl_data_requester" 
+            	android:textAppearance="@android:style/TextAppearance.Holo.Small" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+			<TextView
+            	android:text="@string/policy_tbl_lbl_rule_description" 
+            	android:textAppearance="@android:style/TextAppearance.Holo.Small" />
+			<TextView
+            	android:id="@+id/policy_tbl_data_rule_description_id"
+            	android:text="@string/policy_tbl_data_rule_description" 
+            	android:textAppearance="@android:style/TextAppearance.Holo.Small" />
+        </TableRow>
+	
+	</TableLayout>
+</RelativeLayout>
